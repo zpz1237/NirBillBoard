@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DB315D121B5145800018817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D111B5145800018817D /* AppDelegate.swift */; };
-		DB315D141B5145800018817D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D131B5145800018817D /* ViewController.swift */; };
 		DB315D171B5145800018817D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D151B5145800018817D /* Main.storyboard */; };
-		DB315D191B5145800018817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB315D181B5145800018817D /* Assets.xcassets */; };
 		DB315D1C1B5145800018817D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D1A1B5145800018817D /* LaunchScreen.storyboard */; };
+		DB315D241B51557C0018817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB315D231B51557C0018817D /* Assets.xcassets */; };
+		DB315D261B515BF00018817D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D251B515BF00018817D /* HomeViewController.swift */; };
+		DB315D281B515F070018817D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D271B515F070018817D /* ExploreViewController.swift */; };
+		DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D291B515F2E0018817D /* CalenderViewController.swift */; };
+		DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D2B1B515F410018817D /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB315D0E1B5145800018817D /* NirBillboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NirBillboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB315D111B5145800018817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB315D131B5145800018817D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB315D161B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB315D181B5145800018817D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB315D1B1B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB315D1D1B5145800018817D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB315D231B51557C0018817D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB315D251B515BF00018817D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB315D271B515F070018817D /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		DB315D291B515F2E0018817D /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		DB315D2B1B515F410018817D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,24 @@
 			isa = PBXGroup;
 			children = (
 				DB315D111B5145800018817D /* AppDelegate.swift */,
-				DB315D131B5145800018817D /* ViewController.swift */,
 				DB315D151B5145800018817D /* Main.storyboard */,
-				DB315D181B5145800018817D /* Assets.xcassets */,
+				DB315D2D1B515F4E0018817D /* FourMainViewController */,
+				DB315D231B51557C0018817D /* Assets.xcassets */,
 				DB315D1A1B5145800018817D /* LaunchScreen.storyboard */,
 				DB315D1D1B5145800018817D /* Info.plist */,
 			);
 			path = NirBillboard;
+			sourceTree = "<group>";
+		};
+		DB315D2D1B515F4E0018817D /* FourMainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DB315D251B515BF00018817D /* HomeViewController.swift */,
+				DB315D271B515F070018817D /* ExploreViewController.swift */,
+				DB315D291B515F2E0018817D /* CalenderViewController.swift */,
+				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
+			);
+			name = FourMainViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB315D1C1B5145800018817D /* LaunchScreen.storyboard in Resources */,
-				DB315D191B5145800018817D /* Assets.xcassets in Resources */,
+				DB315D241B51557C0018817D /* Assets.xcassets in Resources */,
 				DB315D171B5145800018817D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB315D141B5145800018817D /* ViewController.swift in Sources */,
+				DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */,
 				DB315D121B5145800018817D /* AppDelegate.swift in Sources */,
+				DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */,
+				DB315D261B515BF00018817D /* HomeViewController.swift in Sources */,
+				DB315D281B515F070018817D /* ExploreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
