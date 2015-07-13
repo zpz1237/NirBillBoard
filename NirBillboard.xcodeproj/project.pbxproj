@@ -20,6 +20,9 @@
 		DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D291B515F2E0018817D /* CalenderViewController.swift */; };
 		DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D2B1B515F410018817D /* ProfileViewController.swift */; };
 		DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */; };
+		DBCF52541B53B813003BDD4B /* ExploreDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */; };
+		DBCF52561B53F724003BDD4B /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */; };
+		DBCF52581B53F72C003BDD4B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		DB315D291B515F2E0018817D /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		DB315D2B1B515F410018817D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = NirBillboard/HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDViewController.swift; sourceTree = "<group>"; };
+		DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				DB315D111B5145800018817D /* AppDelegate.swift */,
+				DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */,
+				DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */,
 				DB315D151B5145800018817D /* Main.storyboard */,
 				DB00A92A1B53A47500E28FC3 /* HomeView */,
 				DB315D2D1B515F4E0018817D /* ExploreView */,
@@ -101,6 +109,7 @@
 				DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */,
 				DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */,
 				DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */,
+				DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */,
 			);
 			name = ExploreView;
 			sourceTree = "<group>";
@@ -176,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCF52581B53F72C003BDD4B /* OnboardingViewController.swift in Sources */,
 				DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */,
+				DBCF52561B53F724003BDD4B /* OnboardingContentViewController.swift in Sources */,
 				DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */,
+				DBCF52541B53B813003BDD4B /* ExploreDViewController.swift in Sources */,
 				DB00A9291B53A42400E28FC3 /* CAPSPageMenu.swift in Sources */,
 				DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */,
 				DB315D121B5145800018817D /* AppDelegate.swift in Sources */,

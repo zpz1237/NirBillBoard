@@ -12,11 +12,91 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let userHasOnboardedKey = "user_has_onboarded"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.backgroundColor = UIColor.whiteColor()
+        application.statusBarStyle = .LightContent
+         let userHasOnboardedAlready = NSUserDefaults.standardUserDefaults().boolForKey(userHasOnboardedKey);
+        
+        if userHasOnboardedAlready {
+            
+            //self.setupNormalRootVC(false);
+            
+            //测试用代码
+            self.window!.rootViewController = self.generateOnboardingViewController()
+            
+        }
+            
+            // Otherwise the user hasn't onboarded yet, so set the root view controller for the application to the
+            // onboarding view controller generated and returned by this method.
+        else {
+            self.window!.rootViewController = self.generateOnboardingViewController()
+        }
+        
+        //这句好像并没有什么卵用
+        self.window!.makeKeyAndVisible()
+        
         return true
+    }
+    
+    func generateOnboardingViewController() -> OnboardingViewController {
+        
+        let firstPage: OnboardingContentViewController = OnboardingContentViewController(title: "What A Beautiful Photo", body: "This city background image is so beautiful", image: UIImage(named:
+            "blue"), buttonText: "Enable Location Services") {
+                print("Do something here...")
+        }
+        
+        let secondPage: OnboardingContentViewController = OnboardingContentViewController(title: "I'm So Sorry", body: "I can't get over the nice blurry background photo.", image: UIImage(named:
+            "red"), buttonText: "Connect With Facebook") {
+                print("Do something else here...");
+        }
+        
+        let thirdPage: OnboardingContentViewController = OnboardingContentViewController(title: "Seriously Though", body: "Kudos to the photographer.", image: UIImage(named:
+            "yellow"), buttonText: "Let's Get Started") {
+                self.handleOnboardingCompletion()
+        }
+        
+        let onboardingVC: OnboardingViewController = OnboardingViewController(backgroundImage: UIImage(named: "street"), contents: [firstPage, secondPage, thirdPage])
+        
+        return onboardingVC
+        
+    }
+    
+    func handleOnboardingCompletion() {
+        // Now that we are done onboarding, we can set in our NSUserDefaults that we've onboarded now, so in the
+        // future when we launch the application we won't see the onboarding again.
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: userHasOnboardedKey)
+        
+        // Setup the normal root view controller of the application, and set that we want to do it animated so that
+        // the transition looks nice from onboarding to normal app.
+        setupNormalRootVC(true)
+    }
+    
+    //展示主页面函数：此处以代码方式设置主页面
+    func setupNormalRootVC(animated : Bool) {
+        // Here I'm just creating a generic view controller to represent the root of my application.
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainVC = storyBoard.instantiateViewControllerWithIdentifier("TabBarViewID")
+        
+        // If we want to animate it, animate the transition - in this case we're fading, but you can do it
+        // however you want.
+        if animated {
+            UIView.transitionWithView(self.window!, duration: 0.5, options:.TransitionCrossDissolve, animations: { () -> Void in
+                self.window!.rootViewController = mainVC
+                }, completion:nil)
+        }
+            
+            // Otherwise we just want to set the root view controller normally.
+        else {
+            self.window?.rootViewController = mainVC;
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

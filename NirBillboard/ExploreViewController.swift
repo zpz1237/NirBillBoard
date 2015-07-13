@@ -20,15 +20,18 @@ class ExploreViewController: UIViewController {
         
         var controllerArray: [UIViewController] = []
         
-        let ExploreAViewController = storyBoard.instantiateViewControllerWithIdentifier("ExploreAViewID")
-        ExploreAViewController.title = "户外探险"
-        controllerArray.append(ExploreAViewController)
-        let ExploreBViewController = storyBoard.instantiateViewControllerWithIdentifier("ExploreBViewID")
-        ExploreBViewController.title = "二次元"
-        controllerArray.append(ExploreBViewController)
-        let ExploreCViewController = storyBoard.instantiateViewControllerWithIdentifier("ExploreCViewID")
-        ExploreCViewController.title = "数码控"
-        controllerArray.append(ExploreCViewController)
+        let ExploreAViewControllerInstance = storyBoard.instantiateViewControllerWithIdentifier("ExploreAViewID") as! ExploreAViewController
+        ExploreAViewControllerInstance.title = "旅行"
+        controllerArray.append(ExploreAViewControllerInstance)
+        let ExploreBViewControllerInstance = storyBoard.instantiateViewControllerWithIdentifier("ExploreBViewID") as! ExploreBViewController
+        ExploreBViewControllerInstance.title = "二次元"
+        controllerArray.append(ExploreBViewControllerInstance)
+        let ExploreCViewControllerInstance = storyBoard.instantiateViewControllerWithIdentifier("ExploreCViewID") as! ExploreCViewController
+        ExploreCViewControllerInstance.title = "互联网"
+        controllerArray.append(ExploreCViewControllerInstance)
+        let ExploreDViewControllerInstance = storyBoard.instantiateViewControllerWithIdentifier("ExploreDViewID") as! ExploreDViewController
+        ExploreDViewControllerInstance.title = "网游"
+        controllerArray.append(ExploreDViewControllerInstance)
         
         let parameters: [CAPSPageMenuOption] = [
             .MenuItemSeparatorWidth(4.3),

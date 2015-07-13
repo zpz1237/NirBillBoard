@@ -143,6 +143,44 @@
             </objects>
             <point key="canvasLocation" x="3841.5" y="80"/>
         </scene>
+        <!--ExploreD View Controller-->
+        <scene sceneID="QqU-rU-Nbj">
+            <objects>
+                <viewController storyboardIdentifier="ExploreDViewID" id="LBl-I2-BIP" customClass="ExploreDViewController" customModule="NirBillboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bc7-h0-PSH"/>
+                        <viewControllerLayoutGuide type="bottom" id="G3k-BC-Had"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QNa-7f-3uL">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV9-VS-Ze1">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="236" width="240" height="128"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="uV9-VS-Ze1"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="uV9-VS-Ze1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIH-HE-44N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4522.5" y="80"/>
+        </scene>
         <!--我的-->
         <scene sceneID="w3M-e3-QNF">
             <objects>
@@ -186,7 +224,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dZq-cT-Sol">
             <objects>
-                <tabBarController id="Ph1-lk-GwS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewID" id="Ph1-lk-GwS" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="hQt-0c-5fP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
