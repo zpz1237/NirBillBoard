@@ -15,6 +15,7 @@
 		DB315D281B515F070018817D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D271B515F070018817D /* ExploreViewController.swift */; };
 		DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D291B515F2E0018817D /* CalenderViewController.swift */; };
 		DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D2B1B515F410018817D /* ProfileViewController.swift */; };
+		DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DB315D271B515F070018817D /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		DB315D291B515F2E0018817D /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		DB315D2B1B515F410018817D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DB315D111B5145800018817D /* AppDelegate.swift */,
 				DB315D151B5145800018817D /* Main.storyboard */,
 				DB315D2D1B515F4E0018817D /* FourMainViewController */,
+				DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */,
 				DB315D231B51557C0018817D /* Assets.xcassets */,
 				DB315D1A1B5145800018817D /* LaunchScreen.storyboard */,
 				DB315D1D1B5145800018817D /* Info.plist */,
@@ -112,6 +115,7 @@
 				TargetAttributes = {
 					DB315D0D1B51457F0018817D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = QYV353CYL3;
 					};
 				};
 			};
@@ -151,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */,
 				DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */,
 				DB315D121B5145800018817D /* AppDelegate.swift in Sources */,
 				DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */,
@@ -266,10 +271,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NirBillboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Azure.NirBillboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -277,10 +285,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NirBillboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Azure.NirBillboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -303,6 +314,7 @@
 				DB315D221B5145800018817D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

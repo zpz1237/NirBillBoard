@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,42 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 205
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")! as! HomeTableViewCell
+        tableView.separatorStyle = .None
+        
+        switch indexPath.row {
+        case 0:
+            break
+        case 1:
+            cell.titleLabel.text = "二次元"
+            cell.detailTitleLabel.text = "初音未来演唱会"
+            cell.timeDescribe.text = "6月28日"
+            cell.chosenImage.image = UIImage(named: "placeHolderB")
+        case 2:
+            cell.titleLabel.text = "数码控"
+            cell.detailTitleLabel.text = "WWDC2015"
+            cell.timeDescribe.text = "6月8号 - 6月12号"
+            cell.chosenImage.image = UIImage(named: "placeHolderC")
+        default:
+            print("indexpath.row超出范围")
+        }
+        
+        return cell
     }
     
 
