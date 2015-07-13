@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB00A9291B53A42400E28FC3 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */; };
+		DB00A92C1B53A69900E28FC3 /* ExploreAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */; };
+		DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */; };
+		DB00A9301B53A6BB00E28FC3 /* ExploreCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */; };
 		DB315D121B5145800018817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D111B5145800018817D /* AppDelegate.swift */; };
 		DB315D171B5145800018817D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D151B5145800018817D /* Main.storyboard */; };
 		DB315D1C1B5145800018817D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D1A1B5145800018817D /* LaunchScreen.storyboard */; };
@@ -19,17 +23,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreAViewController.swift; sourceTree = "<group>"; };
+		DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBViewController.swift; sourceTree = "<group>"; };
+		DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCViewController.swift; sourceTree = "<group>"; };
 		DB315D0E1B5145800018817D /* NirBillboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NirBillboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB315D111B5145800018817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB315D161B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB315D1B1B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB315D1D1B5145800018817D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB315D231B51557C0018817D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB315D251B515BF00018817D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DB315D251B515BF00018817D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = NirBillboard/HomeViewController.swift; sourceTree = "<group>"; };
 		DB315D271B515F070018817D /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		DB315D291B515F2E0018817D /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		DB315D2B1B515F410018817D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = NirBillboard/HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB00A92A1B53A47500E28FC3 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */,
+				DB315D251B515BF00018817D /* HomeViewController.swift */,
+			);
+			name = HomeView;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DB315D051B51457F0018817D = {
 			isa = PBXGroup;
 			children = (
@@ -64,24 +82,27 @@
 			children = (
 				DB315D111B5145800018817D /* AppDelegate.swift */,
 				DB315D151B5145800018817D /* Main.storyboard */,
-				DB315D2D1B515F4E0018817D /* FourMainViewController */,
-				DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */,
+				DB00A92A1B53A47500E28FC3 /* HomeView */,
+				DB315D2D1B515F4E0018817D /* ExploreView */,
 				DB315D231B51557C0018817D /* Assets.xcassets */,
+				DB315D291B515F2E0018817D /* CalenderViewController.swift */,
+				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
 				DB315D1A1B5145800018817D /* LaunchScreen.storyboard */,
 				DB315D1D1B5145800018817D /* Info.plist */,
 			);
 			path = NirBillboard;
 			sourceTree = "<group>";
 		};
-		DB315D2D1B515F4E0018817D /* FourMainViewController */ = {
+		DB315D2D1B515F4E0018817D /* ExploreView */ = {
 			isa = PBXGroup;
 			children = (
-				DB315D251B515BF00018817D /* HomeViewController.swift */,
+				DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */,
 				DB315D271B515F070018817D /* ExploreViewController.swift */,
-				DB315D291B515F2E0018817D /* CalenderViewController.swift */,
-				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
+				DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */,
+				DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */,
+				DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */,
 			);
-			name = FourMainViewController;
+			name = ExploreView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +178,13 @@
 			files = (
 				DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */,
 				DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */,
+				DB00A9291B53A42400E28FC3 /* CAPSPageMenu.swift in Sources */,
+				DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */,
 				DB315D121B5145800018817D /* AppDelegate.swift in Sources */,
 				DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */,
 				DB315D261B515BF00018817D /* HomeViewController.swift in Sources */,
+				DB00A92C1B53A69900E28FC3 /* ExploreAViewController.swift in Sources */,
+				DB00A9301B53A6BB00E28FC3 /* ExploreCViewController.swift in Sources */,
 				DB315D281B515F070018817D /* ExploreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
