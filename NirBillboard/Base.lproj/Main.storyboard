@@ -152,6 +152,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G3k-BC-Had"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QNa-7f-3uL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uV9-VS-Ze1">
@@ -260,7 +261,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="205" id="12b-Gp-asQ" customClass="HomeTableViewCell" customModule="NirBillboard" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="205" id="12b-Gp-asQ" customClass="HomeTableViewCell" customModule="NirBillboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="600" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="12b-Gp-asQ" id="W4i-6S-uO0">
@@ -428,10 +429,39 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="dZp-p8-smE"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="Waa-jz-tJ7" kind="presentation" identifier="homeDetailSegue" modalTransitionStyle="flipHorizontal" id="TZ5-jK-gS4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnJ-jD-Z6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1788" y="-589"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="mRl-1g-v5i">
+            <objects>
+                <viewController id="WxO-Df-E7q" customClass="HomeDetailViewController" customModule="NirBillboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TQT-6x-sCl"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdc-Yz-Vks"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vkJ-uE-PsW">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="详情" id="vcn-8o-BQC">
+                        <barButtonItem key="leftBarButtonItem" image="backArrow" id="RJ3-Ch-XnD">
+                            <connections>
+                                <segue destination="3Hf-s2-KUh" kind="unwind" unwindAction="unwindToMain:" id="vcL-id-dGX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBX-LD-Saw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3Hf-s2-KUh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3160.5" y="-589"/>
         </scene>
         <!--首页-->
         <scene sceneID="9bc-nF-uZ0">
@@ -515,12 +545,32 @@
             </objects>
             <point key="canvasLocation" x="975" y="1448"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ISo-yH-Dc3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Waa-jz-tJ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rYz-qw-irp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WxO-Df-E7q" kind="relationship" relationship="rootViewController" id="VCP-o2-zRk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHS-LA-QoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473.5" y="-589"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Calender" width="32" height="32"/>
         <image name="Explore" width="32" height="32"/>
         <image name="Home" width="32" height="32"/>
         <image name="Profile" width="32" height="32"/>
+        <image name="backArrow" width="9" height="17"/>
         <image name="placeHolderA" width="384" height="146"/>
     </resources>
 </document>

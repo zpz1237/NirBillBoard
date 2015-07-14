@@ -7,25 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165F1D366301225A982AE5BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF493FFAB1E56EDF03D2D226 /* libPods.a */; };
 		DB00A9291B53A42400E28FC3 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */; };
 		DB00A92C1B53A69900E28FC3 /* ExploreAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */; };
 		DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */; };
 		DB00A9301B53A6BB00E28FC3 /* ExploreCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */; };
 		DB315D121B5145800018817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D111B5145800018817D /* AppDelegate.swift */; };
 		DB315D171B5145800018817D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D151B5145800018817D /* Main.storyboard */; };
-		DB315D1C1B5145800018817D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D1A1B5145800018817D /* LaunchScreen.storyboard */; };
 		DB315D241B51557C0018817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB315D231B51557C0018817D /* Assets.xcassets */; };
 		DB315D261B515BF00018817D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D251B515BF00018817D /* HomeViewController.swift */; };
 		DB315D281B515F070018817D /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D271B515F070018817D /* ExploreViewController.swift */; };
 		DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D291B515F2E0018817D /* CalenderViewController.swift */; };
 		DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D2B1B515F410018817D /* ProfileViewController.swift */; };
 		DB9198C71B52553B005EEBA0 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */; };
+		DBBB1DC31B549E7700CD132A /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = DBBB1DC21B549E7700CD132A /* podfile */; };
 		DBCF52541B53B813003BDD4B /* ExploreDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */; };
 		DBCF52561B53F724003BDD4B /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */; };
 		DBCF52581B53F72C003BDD4B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */; };
+		DBCF525B1B540268003BDD4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBCF52591B540268003BDD4B /* LaunchScreen.storyboard */; };
+		DBCF525E1B540360003BDD4B /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCF525D1B540360003BDD4B /* HomeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87B8CD416AA03C414E7E4460 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C98DAB35B3BE6CE21512C712 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreAViewController.swift; sourceTree = "<group>"; };
 		DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +38,6 @@
 		DB315D0E1B5145800018817D /* NirBillboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NirBillboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB315D111B5145800018817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB315D161B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DB315D1B1B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB315D1D1B5145800018817D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB315D231B51557C0018817D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB315D251B515BF00018817D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = NirBillboard/HomeViewController.swift; sourceTree = "<group>"; };
@@ -41,9 +45,14 @@
 		DB315D291B515F2E0018817D /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		DB315D2B1B515F410018817D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewCell.swift; path = NirBillboard/HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DBBB1DC21B549E7700CD132A /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDViewController.swift; sourceTree = "<group>"; };
 		DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DBCF525A1B540268003BDD4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = NirBillboard/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBCF525D1B540360003BDD4B /* HomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		DBCF52631B5491CE003BDD4B /* NirBillboard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NirBillboard-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		DF493FFAB1E56EDF03D2D226 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +60,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165F1D366301225A982AE5BE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A973AE4499139215F6B35DB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87B8CD416AA03C414E7E4460 /* Pods.debug.xcconfig */,
+				C98DAB35B3BE6CE21512C712 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DB00A92A1B53A47500E28FC3 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */,
 				DB315D251B515BF00018817D /* HomeViewController.swift */,
+				DBCF525D1B540360003BDD4B /* HomeDetailViewController.swift */,
+				DB9198C61B52553B005EEBA0 /* HomeTableViewCell.swift */,
 			);
 			name = HomeView;
 			path = ..;
@@ -70,8 +90,11 @@
 		DB315D051B51457F0018817D = {
 			isa = PBXGroup;
 			children = (
+				DBBB1DC21B549E7700CD132A /* podfile */,
 				DB315D101B5145800018817D /* NirBillboard */,
 				DB315D0F1B5145800018817D /* Products */,
+				A973AE4499139215F6B35DB2 /* Pods */,
+				ED0691370D7EBAAC8C5E6C6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,15 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				DB315D111B5145800018817D /* AppDelegate.swift */,
-				DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */,
-				DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */,
 				DB315D151B5145800018817D /* Main.storyboard */,
+				DBCF52591B540268003BDD4B /* LaunchScreen.storyboard */,
+				DBCF52631B5491CE003BDD4B /* NirBillboard-Bridging-Header.h */,
+				DBCF525C1B540274003BDD4B /* Launch */,
 				DB00A92A1B53A47500E28FC3 /* HomeView */,
 				DB315D2D1B515F4E0018817D /* ExploreView */,
 				DB315D231B51557C0018817D /* Assets.xcassets */,
 				DB315D291B515F2E0018817D /* CalenderViewController.swift */,
 				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
-				DB315D1A1B5145800018817D /* LaunchScreen.storyboard */,
 				DB315D1D1B5145800018817D /* Info.plist */,
 			);
 			path = NirBillboard;
@@ -114,6 +137,23 @@
 			name = ExploreView;
 			sourceTree = "<group>";
 		};
+		DBCF525C1B540274003BDD4B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				DBCF52551B53F724003BDD4B /* OnboardingContentViewController.swift */,
+				DBCF52571B53F72C003BDD4B /* OnboardingViewController.swift */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		ED0691370D7EBAAC8C5E6C6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF493FFAB1E56EDF03D2D226 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB315D201B5145800018817D /* Build configuration list for PBXNativeTarget "NirBillboard" */;
 			buildPhases = (
+				AFA34194B06A60C0CEDE47FE /* Check Pods Manifest.lock */,
 				DB315D0A1B51457F0018817D /* Sources */,
 				DB315D0B1B51457F0018817D /* Frameworks */,
 				DB315D0C1B51457F0018817D /* Resources */,
+				21024B02AFEC536FA182217B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +182,7 @@
 		DB315D061B51457F0018817D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = NSNirvana;
 				TargetAttributes = {
@@ -172,13 +215,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB315D1C1B5145800018817D /* LaunchScreen.storyboard in Resources */,
+				DBCF525B1B540268003BDD4B /* LaunchScreen.storyboard in Resources */,
 				DB315D241B51557C0018817D /* Assets.xcassets in Resources */,
+				DBBB1DC31B549E7700CD132A /* podfile in Resources */,
 				DB315D171B5145800018817D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21024B02AFEC536FA182217B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFA34194B06A60C0CEDE47FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB315D0A1B51457F0018817D /* Sources */ = {
@@ -197,6 +274,7 @@
 				DB315D261B515BF00018817D /* HomeViewController.swift in Sources */,
 				DB00A92C1B53A69900E28FC3 /* ExploreAViewController.swift in Sources */,
 				DB00A9301B53A6BB00E28FC3 /* ExploreCViewController.swift in Sources */,
+				DBCF525E1B540360003BDD4B /* HomeDetailViewController.swift in Sources */,
 				DB315D281B515F070018817D /* ExploreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,12 +290,13 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DB315D1A1B5145800018817D /* LaunchScreen.storyboard */ = {
+		DBCF52591B540268003BDD4B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB315D1B1B5145800018817D /* Base */,
+				DBCF525A1B540268003BDD4B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,8 +385,10 @@
 		};
 		DB315D211B5145800018817D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B8CD416AA03C414E7E4460 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NirBillboard/Info.plist;
@@ -315,13 +396,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Azure.NirBillboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NirBillboard-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DB315D221B5145800018817D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C98DAB35B3BE6CE21512C712 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NirBillboard/Info.plist;
@@ -329,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Azure.NirBillboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "NirBillboard-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -46,21 +46,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func generateOnboardingViewController() -> OnboardingViewController {
         
         let firstPage: OnboardingContentViewController = OnboardingContentViewController(title: "What A Beautiful Photo", body: "This city background image is so beautiful", image: UIImage(named:
-            "blue"), buttonText: "Enable Location Services") {
-                print("Do something here...")
+            "blue"), buttonText: "") {
+                
         }
         
         let secondPage: OnboardingContentViewController = OnboardingContentViewController(title: "I'm So Sorry", body: "I can't get over the nice blurry background photo.", image: UIImage(named:
-            "red"), buttonText: "Connect With Facebook") {
-                print("Do something else here...");
-        }
-        
-        let thirdPage: OnboardingContentViewController = OnboardingContentViewController(title: "Seriously Though", body: "Kudos to the photographer.", image: UIImage(named:
-            "yellow"), buttonText: "Let's Get Started") {
+            "red"), buttonText: "Start") {
                 self.handleOnboardingCompletion()
         }
         
-        let onboardingVC: OnboardingViewController = OnboardingViewController(backgroundImage: UIImage(named: "street"), contents: [firstPage, secondPage, thirdPage])
+        let onboardingVC: OnboardingViewController = OnboardingViewController(backgroundImage: UIImage(named: "Background"), contents: [firstPage, secondPage])
         
         return onboardingVC
         
@@ -87,11 +82,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If we want to animate it, animate the transition - in this case we're fading, but you can do it
         // however you want.
         if animated {
+            
             UIView.transitionWithView(self.window!, duration: 0.5, options:.TransitionCrossDissolve, animations: { () -> Void in
-                self.window!.rootViewController = mainVC
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.window!.rootViewController = mainVC
+                })
+                
+                //self.window!.rootViewController = mainVC
                 }, completion:nil)
         }
-            
             // Otherwise we just want to set the root view controller normally.
         else {
             self.window?.rootViewController = mainVC;

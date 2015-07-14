@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        performSegueWithIdentifier("homeDetailSegue", sender: self)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,7 +63,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -71,6 +71,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        print("back")
+    }
 
 }
