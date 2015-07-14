@@ -422,7 +422,7 @@
                             <constraint firstItem="WEj-pp-ueA" firstAttribute="leading" secondItem="Eta-3Z-Ghq" secondAttribute="leading" id="NAT-XC-ZJA"/>
                             <constraint firstAttribute="trailing" secondItem="WEj-pp-ueA" secondAttribute="trailing" id="nxM-cT-Yjf"/>
                             <constraint firstAttribute="bottom" secondItem="WEj-pp-ueA" secondAttribute="bottom" id="rpF-CV-SQk"/>
-                            <constraint firstItem="WEj-pp-ueA" firstAttribute="top" secondItem="8vF-mm-Es3" secondAttribute="bottom" constant="-64" id="wIA-tI-Rdb"/>
+                            <constraint firstItem="WEj-pp-ueA" firstAttribute="top" secondItem="8vF-mm-Es3" secondAttribute="bottom" id="wIA-tI-Rdb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="jag-N1-mh3">
@@ -430,6 +430,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="tableView" destination="WEj-pp-ueA" id="XVt-o4-ugw"/>
                         <segue destination="Waa-jz-tJ7" kind="presentation" identifier="homeDetailSegue" modalTransitionStyle="flipHorizontal" id="TZ5-jK-gS4"/>
                     </connections>
                 </viewController>
@@ -449,16 +450,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fk-q8-Omd">
-                                <rect key="frame" x="180" y="72" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CyC-F0-laS">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="64" width="384" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="dX5-Lj-bQb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dX5-Lj-bQb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="dX5-Lj-bQb"/>
+                                    </mask>
                                 </variation>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CyC-F0-laS" firstAttribute="top" secondItem="TQT-6x-sCl" secondAttribute="bottom" id="57f-Ff-4ek"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CyC-F0-laS" secondAttribute="trailing" constant="-12" id="AMd-eB-Ila"/>
+                            <constraint firstItem="CyC-F0-laS" firstAttribute="leading" secondItem="vkJ-uE-PsW" secondAttribute="leadingMargin" constant="-12" id="caq-V6-tAt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CyC-F0-laS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="57f-Ff-4ek"/>
+                                <exclude reference="AMd-eB-Ila"/>
+                                <exclude reference="caq-V6-tAt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CyC-F0-laS"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="57f-Ff-4ek"/>
+                                <include reference="AMd-eB-Ila"/>
+                                <include reference="caq-V6-tAt"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="详情" id="vcn-8o-BQC">
                         <barButtonItem key="leftBarButtonItem" image="backArrow" id="RJ3-Ch-XnD">
@@ -468,7 +504,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="homeDetailImage" destination="6fk-q8-Omd" id="UdI-JW-Def"/>
+                        <outlet property="homeDetailImage" destination="CyC-F0-laS" id="mfK-cK-p7R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBX-LD-Saw" userLabel="First Responder" sceneMemberID="firstResponder"/>

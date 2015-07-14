@@ -10,11 +10,13 @@ import UIKit
 
 class HomeDetailViewController: UIViewController {
     
+    var homeDetailImageTemp: UIImage?
+    
     @IBOutlet weak var homeDetailImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        homeDetailImage.image = homeDetailImageTemp
         // Do any additional setup after loading the view.
     }
 

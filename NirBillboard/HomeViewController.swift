@@ -20,10 +20,17 @@ var homeContentsArray = [CellContents]()
 var homeContentsModel = CellContents()
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+   
+    @IBOutlet weak var tableView: UITableView!
+    
+    var selectedCellCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.translucent  = false
+        
+        self.tableView.header = setupHeader(wayToRefresh.gifRefresh)!
+        self.tableView.footer = MJRefreshBackNormalFooter(refreshingTarget: self, refreshingAction: Selector("loadMoreData"))
         
         homeContentsModel.titleLabelText = "旅行"
         homeContentsModel.detailTitleLabelText = "Yosemite国家公园"
@@ -53,6 +60,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedCellCount = indexPath.row
         performSegueWithIdentifier("homeDetailSegue", sender: self)
     }
     
@@ -69,11 +77,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.separatorStyle = .None
         
         cell.titleLabel.text = homeContentsArray[indexPath.row].titleLabelText
-        print("\(cell.titleLabel.text)")
         cell.detailTitleLabel.text = homeContentsArray[indexPath.row].detailTitleLabelText
-        print("\(cell.detailTitleLabel.text)")
         cell.timeDescribe.text = homeContentsArray[indexPath.row].timeDescribleText
-        print("\(cell.timeDescribe.text)")
         cell.chosenImage.image = homeContentsArray[indexPath.row].chosenImageImage
         
         return cell
@@ -88,15 +93,73 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "homeDetailSegue" {
-            if let vc = segue.destinationViewController as? HomeDetailViewController {
-                vc.homeDetailImage.image = UIImage(named: "")
+            
+            if let nav = segue.destinationViewController as? UINavigationController {
+                if let vc = nav.topViewController as? HomeDetailViewController {
+                    vc.homeDetailImageTemp = homeContentsArray[selectedCellCount].chosenImageImage
+                }
             }
         }
-        
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {
         print("back")
+    }
+    
+    // MARK: - Refresh
+    enum wayToRefresh {
+        case normalRefresh
+        case gifRefresh
+    }
+    
+    func setupHeader(method: wayToRefresh) -> MJRefreshHeader? {
+        
+        switch method {
+        case .normalRefresh:
+            let normalHeader = MJRefreshNormalHeader { () -> Void in
+                print("NormalRefresh")
+                self.tableView.header.endRefreshing()
+            }
+            return normalHeader
+            
+        case .gifRefresh:
+            let gifHeader = MJRefreshGifHeader(refreshingTarget: self, refreshingAction: Selector("loadMoreData"))
+            //添加图片
+            gifHeader.setImages(addDropDownImages()!, forState: MJRefreshStateIdle)
+            gifHeader.setImages(addLoadingImages()!, forState: MJRefreshStateRefreshing)
+            return gifHeader
+        }
+        
+    }
+    
+    func loadMoreData() {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW,Int64(1*Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+            self.tableView.header.endRefreshing()
+            self.tableView.footer.endRefreshing()
+        })
+    }
+    
+    func addDropDownImages() -> [UIImage]? {
+        var images = [UIImage]()
+        var imageName: String
+        for i in 1...60 {
+            imageName = "dropdown_anim__000\(i)"
+            let image = UIImage(named: imageName)
+            images.append(image!)
+        }
+        return images
+    }
+    
+    func addLoadingImages() -> [UIImage]? {
+        var images = [UIImage]()
+        var imageName: String
+        for i in 1...3 {
+            imageName = "dropdown_loading_0\(i)"
+            let image = UIImage(named: imageName)
+            images.append(image!)
+        }
+        return images
+        
     }
 
 }
