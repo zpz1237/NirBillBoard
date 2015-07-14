@@ -8,18 +8,50 @@
 
 import UIKit
 
+struct CellContents {
+    var titleLabelText: String = ""
+    var detailTitleLabelText: String  = ""
+    var timeDescribleText: String = ""
+    var chosenImageImage: UIImage = UIImage(named: "placeHolderA")!
+}
+
+//数据源
+var homeContentsArray = [CellContents]()
+var homeContentsModel = CellContents()
+
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.translucent  = false
+        
+        homeContentsModel.titleLabelText = "旅行"
+        homeContentsModel.detailTitleLabelText = "Yosemite国家公园"
+        homeContentsModel.timeDescribleText = "7月21日 - 8月2日"
+        homeContentsModel.chosenImageImage = UIImage(named: "placeHolderA")!
+        homeContentsArray.append(homeContentsModel)
+        
+        homeContentsModel.titleLabelText = "二次元"
+        homeContentsModel.detailTitleLabelText = "初音未来演唱会"
+        homeContentsModel.timeDescribleText = "6月28日"
+        homeContentsModel.chosenImageImage = UIImage(named: "placeHolderB")!
+        homeContentsArray.append(homeContentsModel)
+        
+        homeContentsModel.titleLabelText = "网游"
+        homeContentsModel.detailTitleLabelText = "剑侠情缘叁"
+        homeContentsModel.timeDescribleText = "8月7日"
+        homeContentsModel.chosenImageImage = UIImage(named: "placeHolderC")!
+        homeContentsArray.append(homeContentsModel)
+        
+        homeContentsModel.titleLabelText = "互联网"
+        homeContentsModel.detailTitleLabelText = "WWDC2015"
+        homeContentsModel.timeDescribleText = "6月8日 - 6月12日"
+        homeContentsModel.chosenImageImage = UIImage(named: "placeHolderD")!
+        homeContentsArray.append(homeContentsModel)
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("homeDetailSegue", sender: self)
     }
@@ -36,33 +68,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier("homeCell")! as! HomeTableViewCell
         tableView.separatorStyle = .None
         
-        switch indexPath.row {
-        case 0:
-            cell.titleLabel.text = "旅行"
-            break
-        case 1:
-            cell.titleLabel.text = "二次元"
-            cell.detailTitleLabel.text = "初音未来演唱会"
-            cell.timeDescribe.text = "6月28日"
-            cell.chosenImage.image = UIImage(named: "placeHolderB")
-        case 2:
-            cell.titleLabel.text = "网游"
-            cell.detailTitleLabel.text = "剑侠情缘叁"
-            cell.timeDescribe.text = "8月7日"
-            cell.chosenImage.image = UIImage(named: "placeHolderC")
-        case 3:
-            cell.titleLabel.text = "互联网"
-            cell.detailTitleLabel.text = "WWDC2015"
-            cell.timeDescribe.text = "6月8日 - 6月12日"
-            cell.chosenImage.image = UIImage(named: "placeHolderD")
-        default:
-            print("indexpath.row超出范围")
-        }
+        cell.titleLabel.text = homeContentsArray[indexPath.row].titleLabelText
+        print("\(cell.titleLabel.text)")
+        cell.detailTitleLabel.text = homeContentsArray[indexPath.row].detailTitleLabelText
+        print("\(cell.detailTitleLabel.text)")
+        cell.timeDescribe.text = homeContentsArray[indexPath.row].timeDescribleText
+        print("\(cell.timeDescribe.text)")
+        cell.chosenImage.image = homeContentsArray[indexPath.row].chosenImageImage
         
         return cell
     }
     
-
     
     // MARK: - Navigation
 
@@ -70,6 +86,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "homeDetailSegue" {
+            if let vc = segue.destinationViewController as? HomeDetailViewController {
+                vc.homeDetailImage.image = UIImage(named: "")
+            }
+        }
+        
     }
     
     @IBAction func unwindToMain(segue: UIStoryboardSegue) {

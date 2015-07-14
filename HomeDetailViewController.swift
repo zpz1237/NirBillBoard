@@ -10,6 +10,8 @@ import UIKit
 
 class HomeDetailViewController: UIViewController {
     
+    @IBOutlet weak var homeDetailImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
