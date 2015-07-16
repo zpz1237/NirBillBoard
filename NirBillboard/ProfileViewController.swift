@@ -8,20 +8,83 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
-
+class ProfileViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    @IBOutlet weak var buttonImage: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        buttonImage.setImage(UIImage(named: "1430891193_photo-128"), forState: UIControlState.Normal)
+        
+        assert(buttonImage.imageView?.image != nil)
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func choosePhoto(sender: UIButton) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "拍照", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
+            self.goCamera()
+        }
+        let archiveAction = UIAlertAction(title: "从相册选择", style: UIAlertActionStyle.Default) { (action: UIAlertAction!) -> Void in
+            self.goImage()
+            }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(archiveAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
-
+    func goCamera() {
+        
+        var sourceType = UIImagePickerControllerSourceType.Camera
+        
+        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }
+        
+        var picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = sourceType
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+        
+    }
+    
+    func goImage() {
+        
+        var picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypesForSourceType(picker.sourceType)!
+        
+        self.presentViewController(picker, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        buttonImage.setImage(image, forState: UIControlState.Normal)
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

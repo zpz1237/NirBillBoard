@@ -52,7 +52,6 @@ class OnboardingViewController: UIViewController, UIPageViewControllerDataSource
             self.view.addSubview(backgroundMaskView)
         }
         
-        
         pageViewController.setViewControllers([contents[0]], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         pageViewController.view.backgroundColor = UIColor.clearColor()
         self.addChildViewController(pageViewController)

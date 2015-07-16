@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if userHasOnboardedAlready {
             
+            //如只想第一次打开应用时显示，使用这行代码
             //self.setupNormalRootVC(false);
             
             //测试用代码

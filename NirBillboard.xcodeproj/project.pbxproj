@@ -12,6 +12,7 @@
 		DB00A92C1B53A69900E28FC3 /* ExploreAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */; };
 		DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */; };
 		DB00A9301B53A6BB00E28FC3 /* ExploreCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */; };
+		DB1315281B56874800786493 /* ExploreATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1315271B56874800786493 /* ExploreATableViewCell.swift */; };
 		DB315D121B5145800018817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB315D111B5145800018817D /* AppDelegate.swift */; };
 		DB315D171B5145800018817D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB315D151B5145800018817D /* Main.storyboard */; };
 		DB315D241B51557C0018817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB315D231B51557C0018817D /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreAViewController.swift; sourceTree = "<group>"; };
 		DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreBViewController.swift; sourceTree = "<group>"; };
 		DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCViewController.swift; sourceTree = "<group>"; };
+		DB1315271B56874800786493 /* ExploreATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreATableViewCell.swift; sourceTree = "<group>"; };
 		DB315D0E1B5145800018817D /* NirBillboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NirBillboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB315D111B5145800018817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB315D161B5145800018817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 				DB315D2D1B515F4E0018817D /* ExploreView */,
 				DB315D231B51557C0018817D /* Assets.xcassets */,
 				DB315D291B515F2E0018817D /* CalenderViewController.swift */,
-				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
+				DB89243B1B57A4A100788C01 /* ProfileView */,
 				DB315D1D1B5145800018817D /* Info.plist */,
 			);
 			path = NirBillboard;
@@ -130,11 +132,20 @@
 				DB00A9281B53A42400E28FC3 /* CAPSPageMenu.swift */,
 				DB315D271B515F070018817D /* ExploreViewController.swift */,
 				DB00A92B1B53A69900E28FC3 /* ExploreAViewController.swift */,
+				DB1315271B56874800786493 /* ExploreATableViewCell.swift */,
 				DB00A92D1B53A6AC00E28FC3 /* ExploreBViewController.swift */,
 				DB00A92F1B53A6BB00E28FC3 /* ExploreCViewController.swift */,
 				DBCF52531B53B813003BDD4B /* ExploreDViewController.swift */,
 			);
 			name = ExploreView;
+			sourceTree = "<group>";
+		};
+		DB89243B1B57A4A100788C01 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				DB315D2B1B515F410018817D /* ProfileViewController.swift */,
+			);
+			name = ProfileView;
 			sourceTree = "<group>";
 		};
 		DBCF525C1B540274003BDD4B /* Launch */ = {
@@ -268,6 +279,7 @@
 				DB315D2A1B515F2E0018817D /* CalenderViewController.swift in Sources */,
 				DBCF52541B53B813003BDD4B /* ExploreDViewController.swift in Sources */,
 				DB00A9291B53A42400E28FC3 /* CAPSPageMenu.swift in Sources */,
+				DB1315281B56874800786493 /* ExploreATableViewCell.swift in Sources */,
 				DB00A92E1B53A6AC00E28FC3 /* ExploreBViewController.swift in Sources */,
 				DB315D121B5145800018817D /* AppDelegate.swift in Sources */,
 				DB315D2C1B515F410018817D /* ProfileViewController.swift in Sources */,
